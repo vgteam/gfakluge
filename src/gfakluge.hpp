@@ -1051,7 +1051,8 @@ namespace gfak{
                             is_empty = false;
                         }
                         if (is_empty) {
-                            func(path_name, 0, false, "", true, false);
+                            // "" not 0: integer 0 constructs a string from null and throws
+                            func(path_name, "", false, "", true, false);
                         }
                     }
                     ++i;
